@@ -22,3 +22,15 @@ Co chceme implementovat:
   - Cards
   - Navigations
   
+## Structure
+
+- HTML
+  - `index.html`
+  - layouts (examples)
+    - &hellip;  
+- CSS
+  - `index.css`
+  - `reset.css`
+  - `baseline-grid.css`
+- JS
+  - `devel.js`

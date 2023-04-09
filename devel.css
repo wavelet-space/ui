@@ -1,0 +1,14 @@
+ /**
+  * DEVELOPMENT
+  */
+
+  #devbox {
+    min-width: 100px;
+    min-height: 100px;
+    position: absolute;
+    z-index: 9;
+    background-color: #fcff4b;
+    border: 1px solid #000000;
+    text-align: center;
+  }
+  
