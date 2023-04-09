@@ -1,53 +1,57 @@
 @charset "UTF-8";
 
-
 /**
  * Variables
  */
 :root {
-    --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --line-height: 1.2;
-    --font-weight: 400;
-    --font-size: 16px;
-    --border-radius: 0.25rem;
-    --border-width: 1px;
-    --outline-width: 3px;
-    --spacing: 1rem;
-    --typography-spacing-vertical: 1.5rem;
-    --block-spacing-vertical: calc(var(--spacing) * 2);
-    --block-spacing-horizontal: var(--spacing);
-    --grid-spacing-vertical: 0;
-    --grid-spacing-horizontal: var(--spacing);
-    --form-element-spacing-vertical: 0.75rem;
-    --form-element-spacing-horizontal: 1rem;
-    --nav-element-spacing-vertical: 1rem;
-    --nav-element-spacing-horizontal: 0.5rem;
-    --nav-link-spacing-vertical: 0.5rem;
-    --nav-link-spacing-horizontal: 0.5rem;
-    --form-label-font-weight: var(--font-weight);
-    --transition: 0.2s ease-in-out;
-    --modal-overlay-backdrop-filter: blur(0.25rem);
+  --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --line-height: 1.5em;
+  --font-weight: 400;
+  --font-size: 16px;
+  --border-radius: 0.25rem;
+  --border-width: 1px;
+  --outline-width: 3px;
+  --spacing: 1rem;
+  --typography-spacing-vertical: 1.5rem;
+  --block-spacing-vertical: calc(var(--spacing) * 2);
+  --block-spacing-horizontal: var(--spacing);
+  --grid-spacing-vertical: 0;
+  --grid-spacing-horizontal: var(--spacing);
+  --form-element-spacing-vertical: 0.75rem;
+  --form-element-spacing-horizontal: 1rem;
+  --nav-element-spacing-vertical: 1rem;
+  --nav-element-spacing-horizontal: 0.5rem;
+  --nav-link-spacing-vertical: 0.5rem;
+  --nav-link-spacing-horizontal: 0.5rem;
+  --form-label-font-weight: var(--font-weight);
+  --transition: 0.2s ease-in-out;
+  --modal-overlay-backdrop-filter: blur(0.25rem);
 
-    /*Development*/
-    --baseline: 1.5em;
-    --devcolor: rgb(155, 155, 155);
+  /* Development */
+  --devcolor: rgb(155, 155, 155);
 }
 
 .container[role=main] {
-    width: 900px;
-    margin: auto;
-    background-color: rgba(0.3, 0.3, 0.3, 0.1);
+  width: 900px;
+  margin: auto;
+  background-color: rgba(0.3, 0.3, 0.3, 0.1);
 }
 
 /**
  * Typography
  */
 
- h1 {
-   font-size: 40px;
-   line-height: var(--baseline) * 2;
-   margin-bottom: var(--baseline);
- }
+h1 {
+  font-size: 40px;
+  line-height: var(--line-height) * 2;
+  margin-bottom: var(--line-height);
+}
+
+h2 {
+  font-size: 28px;
+  line-height: var(--line-height) * 2;
+  margin-bottom: var(--line-height);
+}
 
 /**
  * Layout
@@ -61,3 +65,32 @@
 /**
  * Forms
  */
+
+form input {
+  font-size: calc(var(--font-size) * 1)
+}
+
+ 
+/* ******************************************************************** */
+/*                             DEVELOPMENT                              */
+/* ******************************************************************** */
+
+#devbox {
+  min-width: 100px;
+  min-height: 100px;
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  border-radius: 3px;
+  z-index: 9;
+  background-color: #e8a9f5;
+  border: 1px solid #000000;
+  box-shadow: 5px 5px #80668198;
+  padding: 1em;
+  color: rgb(46, 46, 46);
+  cursor: grab;
+}
+
+#devbox input {
+  cursor: pointer;
+}

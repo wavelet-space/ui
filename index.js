@@ -22,18 +22,54 @@ body.appendChild(devbox)
 
 var input_show_lines = document.getElementById("input-show-lines");
 
+// Default styles
+let html = document.getElementsByTagName("html")[0]
+html.style.backgroundImage = "linear-gradient(var(--devcolor) 1px, transparent 1px)"  
+html.style.backgroundSize = "auto calc(var(--line-height) * 0)"
+html.style.backgroundColor = "white" //"#aae"
+console.log(html.style.backgroundImage)
+
+//
+// Events
+//
 input_show_lines.addEventListener("click", (e) => {
   let element = e.target
-  let body = document.getElementsByTagName("html")[0]
+  let html = document.getElementsByTagName("html")[0]
   if (element.checked) {
-    // switch-off development 
-    body.style.backgroundImage = "linear-gradient(var(--devcolor) 1px, transparent 1px)"  
-    console.log(body.style.backgroundImage, body.style.backgroundColor)
-  }else {
-    body.style.backgroundImage = "linear-gradient(linear-gradient(var(--devcolor) 0px, transparent 0px)"
-    console.log(body.style.backgroundImage)
+    html.style.backgroundImage = "linear-gradient(var(--devcolor) 1px, transparent 1px)"  
+    html.style.backgroundSize = "auto var(--line-height)"
+  } else {
+    html.style.backgroundImage = "linear-gradient(linear-gradient(var(--devcolor) 0px, transparent 0px)"
+    html.style.backgroundSize = "auto 0"
   }
 })
+
+
+/** 
+ * Returns the one half of the current mouse coordinates relative to the browser window.
+ * Assumes the axis parameter to be uppercase: Either "X" or "Y".
+ */
+const getMouseCoordinate = (event, axis) => {
+  var property = (axis == "X") ? "scrollLeft" : "scrollTop";
+  if (event.pageX) {
+      return event["page"+axis];
+  } else {
+      return event["client"+axis] + (document.documentElement[property] ? document.documentElement[property] : document.body[property]);;
+  }
+};
+
+const getMouseCoordinates = (event) =>  {
+    return { 
+        x: getMouseCoordinate(event, "X"),
+        y: getMouseCoordinate(event, "Y")
+    }
+}
+
+window.addEventListener("mousemove", (event) => {
+  console.log(getMouseCoordinates(event))
+})
+
+
 
 // Make the DIV element draggable:
 window.onload = (function() {

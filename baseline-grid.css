@@ -1,8 +1,0 @@
-/**
- * Show baseline grid.
- */
-
-:root {
-    /* background-image: linear-gradient(var(--devcolor) 1px, transparent 1px); */
-    background-size: auto var(--baseline);
-}
