@@ -6,7 +6,9 @@ var devbox = document.createElement("div")
 devbox.setAttribute("id", "devbox")
 var markup = `
     <div>
-      <h3>Show/Hide</h3>
+      <header>
+        <h3>Show/Hide</h3>
+      </header>
       <form>
         <input id='input-show-lines' type='checkbox' value='A'/>Horizontal lines</br>
         <input id='input-show-vertical-lines' type='checkbox' value='B'/>Vertical lines
