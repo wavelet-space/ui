@@ -6,7 +6,7 @@
 :root {
   --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --line-height: 1.5em;
-  --font-weight: 400;
+  --font-weight: 400;  /* 400 normal; 700 bold */
   --font-size: 16px;
   --border-radius: 0.25rem;
   --border-width: 1px;
@@ -28,7 +28,7 @@
   --modal-overlay-backdrop-filter: blur(0.25rem);
 
   /* Development */
-  --devcolor: rgb(155, 155, 155);
+  --devcolor: rgb(255, 0, 106);/* rgb(155, 155, 155); */
 }
 
 .container[role=main] {
@@ -53,6 +53,10 @@ h2 {
   margin-bottom: var(--line-height);
 }
 
+h3 {
+  font-size:  20px;
+}
+
 /**
  * Layout
  */
@@ -67,7 +71,16 @@ h2 {
  */
 
 form input {
-  font-size: calc(var(--font-size) * 1)
+  display: inline-block;
+  width: 100%;
+  font-size: calc(var(--font-size) * 1);
+}
+
+form label {
+  display: inline-block;
+  width: 100%;
+  font-size: var(--font-size);
+  font-weight: calc( (var(--font-weight) / 4) * 7) /* 700 bold */
 }
 
  
