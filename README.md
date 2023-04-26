@@ -1,29 +1,42 @@
 # CSS
 
-Cascading Style Sheets Framework
+*Minimalistic Cascading Style Sheets framework for semantic HTML.*
+
+ ![GitHub stars](https://img.shields.io/github/stars/wavelet-space/css?style=social)
 
 ## Goals
 
-(cs) Pro různorodé webové projekty potřebujeme rozumný zakladní výchozý vzhled HTML dokumentů. Cílem je vytvořit základní sadu stylů v podobě malého frameworku, který bude možná použít jako základní výchozí vzhled a který lze dále přizpůsobit konkrétnímu projektu. Ideální je nasazení pro administrační nebo demonstrační stránky (dashboard).
+Pro webové projekty potřebujeme často výchozý vzhled dokumentů. 
+Ideální je nasazení pro administrační nebo demonstrační stránky (dashboard).
 
-Framework by měl mít tyto vlastnosti:
 
-- Stážení přímo z GitHub nebo CDN.
+Cílem je vytvořit základní sadu stylů v podobě malého CSS frameworku, který bude možné použít jako rozumný základ a který lze snadno přizpůsobit konkrétnímu projektu.
+
+CSS framework by měl mít tyto vlastnosti:
+
+- Dostupnost: stážení přímo z GitHub pomocí CDN např. <https://www.jsdelivr.com/>.
 - Modulárnost tzn., že lze použít jen části frameworku.
 - Minifikace pro rychlé načítání při stahování.
 
-Co chceme implementovat:
+Co je třeba implementovat:
 
 - Basics
-  - Reset
-  - Typography: h1 až h6
-  - Layout
-  - Forms
+  - Reset: Nastavení/vypnutí výchozích vlastností prvků stránky.
+  - Typography: Nastevní základních typografických konvencí: velikost písma, mřížka atd.
+    - Headings
+    - Paragraphs
+    - Blockquotes
+    - Details
+    - Definition Lists
+  - Layout: Základní layouty stránkek/aplikací.  
+  - Forms:
     - Inputs
       - text
       - date
-      - range  
+      - range
+    - Buttons  
   - Tables
+  
 - Components
   - Cards
   - Navigations

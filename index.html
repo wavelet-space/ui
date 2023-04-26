@@ -1,104 +1,204 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wavelet CSS</title>
-    <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="css/reset.css"/>    
+    <title>Curl CSS Framework</title>
+    <link rel="stylesheet" href="index.css"/>
     <script type="text/javascript" src="index.js" defer></script>
+
+    <style type="text/css">
+        html, body {
+           scroll-behavior: smooth;
+           margin: 0;
+           padding: 0;
+        }
+        header {
+            border-bottom: 1px solid black;
+        }
+
+        nav[role=main]  {
+          display: inline-block;
+          margin: 0;
+          padding: 0;  
+        } 
+        
+        nav[role=main] ul li {
+            display: inline-block;
+            list-style-type: none;
+        }
+        
+        nav[role=main] ul li a  {
+            text-decoration: none;
+            color: black
+        }
+
+        nav[role=main] ul li a:hover {
+            color: white
+        }
+
+        /* This is only for development purpose. */
+        .container[role=main] {
+            width: 900px;
+            margin: auto;
+            border-left: 1px solid rgb(133, 133, 133);
+            border-right: 1px solid rgb(133, 133, 133);
+        }
+
+    </style>
 
 </head>
 <body>
     <header style="background-color: rgba(0, 0, 0, 0.425); color: white; padding: 0.5em;">
-        <nav role="main">Navigation</nav>
+        <nav role="main">
+            Navigation
+            <ul>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#themes">Themes</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container" role="main">
         <main>    
             <h1>Wavelet CSS Framework</h1>
-            
             <p>Styling of Wavelet CSS Framework</p>
             
-            <h2>Typography</h2>
-            <ul>
-                <li>letter-spacing</li>
-                <li>line-height</li>
-            </ul>
+            <section>
+                <h2>Usage</h2>
+<pre><code>&lt;html>
+  &lt;head>
+    &lt;title>&lt;/title>
+    &lt;link>&lt;/title>
+  &lt;/head>
+   &lt;body>&lt;/body>
+&lt;/html>
+</code></pre>
+            </section>
             
-            <hgroup>
-                <h1>Heading 1</h1>
-                <p>Heading of level 1</p>
-            </hgroup>
-                <h2>Heading 2</h2>
-                <p>Heading level 2</p>
-            </hgroup>
-            <hgroup>
-                <h3>Heading 3</h3>
-                <p>Heading level 3</p>
-            </hgroup>
+            <section id="typography">
 
-            <h2>Forms</h2>
+                <h2>Typography</h2>
+                <ul>
+                    <li>letter-spacing</li>
+                    <li>line-height</li>
+                </ul>
+                
+                <hgroup>
+                    <h1>Heading 1</h1>
+                    <p>Heading of level 1</p>
+                </hgroup>
+                    <h2>Heading 2</h2>
+                    <p>Heading level 2</p>
+                </hgroup>
+                <hgroup>
+                    <h3>Heading 3</h3>
+                    <p>Heading level 3</p>
+                </hgroup>
+                
+            </section>
             
-            <form>
-                <label name="l" for="">Text</label>
-                <input id="input-text" type="text" />
-                
-                <label name="l" for="">Button</label>
-                <input type="button">
-                
-                <label name="l" for="">Checkbox</label>
-                <input type="checkbox">
+            <section id="elements">
+                <h2>Elements</h2>
 
-                <label name="l" for="">Color</label>
-                <input type="color">
-                
-                <label name="l" for="">Date</label>
-                <input type="date">
-                
-                <label name="l" for="">Datetime local</label>
-                <input type="datetime-local">
-                
-                <input type="email">
-                
-                <input type="file">
-                
-                <input type="hidden">
-                
-                <input type="image">
-                
-                <input type="month">
-                
-                <input type="number">
-                
-                <input type="password">
-                
-                <input type="radio">
-                
-                <input type="range">
-                
-                <input type="reset">
-                
-                <input type="search">
-                
-                <input type="submit">
-                
-                <label name="l" for="">Telephone</label>
-                <input type="tel">
-                
-                <label name="l" for="">Time</label>
-                <input type="time">
-                
-                <label name="l" for="">URL</label>
-                <input type="url">
-                
-                <label name="l" for="">Week</label>
-                <input type="week">
-            </form>
+                <h3>Details</h3>
 
+                <details>
+                    <summary>Click to show/hide</summary>
+                    <p>You are seeing a details.</p>
+                </details>
+
+                <h3>Blockquote</h3>
+                    <blockquote>
+                        <p>Hello, world!</p>
+                        <button>Click me!</button>
+                    </blockquote>
+
+                <h3>Definition List</h3>
+                    <dl>
+                        <dt>
+                            term
+                        </dt>
+                        <dd>
+                            definition
+                        </dd>
+                    </dl>
+
+            </section>
+
+            <section id="forms">
+
+                <h2>Forms</h2>
+                    
+                <p>
+                    The list of available form elements.  
+                </p>
+                
+                <form class="block">
+                    <label name="l" for="">Text</label>
+                    <input id="input-text" type="text" />
+                    
+                    <label name="l" for="">Button</label>
+                    <input type="button">
+                    
+                    <label name="l" for="">Checkbox</label>
+                    <input type="checkbox">
+
+                    <label name="l" for="">Color</label>
+                    <input type="color">
+                    
+                    <label name="l" for="">Date</label>
+                    <input type="date">
+                    
+                    <label name="l" for="">Datetime local</label>
+                    <input type="datetime-local">
+                    
+                    <input type="email">
+                    
+                    <input type="file">
+                    
+                    <input type="hidden">
+                    
+                    <input type="image">
+                    
+                    <input type="month">
+                    
+                    <input type="number">
+                    
+                    <input type="password">
+                    
+                    <input type="radio">
+                    
+                    <input type="range">
+                    
+                    <input type="reset">
+                    
+                    <input type="search">
+                    
+                    <input type="submit">
+                    
+                    <label name="l" for="">Telephone</label>
+                    <input type="tel">
+                    
+                    <label name="l" for="">Time</label>
+                    <input type="time">
+                    
+                    <label name="l" for="">URL</label>
+                    <input type="url">
+                    
+                    <label name="l" for="">Week</label>
+                    <input type="week">
+                </form>
+            </section>
+            <section id="themes">
+                <h2>Themes</h2>
+                Two themes should be created: dark and light.
+            </section>
         </main>
-        <footer>Footer</footer>
+        <footer>
+            <p>Footer</p>
+        </footer>
     </div>
         
 </body>

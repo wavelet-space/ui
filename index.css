@@ -28,14 +28,18 @@
   --modal-overlay-backdrop-filter: blur(0.25rem);
 
   /* Development */
-  --devcolor: rgb(255, 0, 106);/* rgb(155, 155, 155); */
+  --devcolor: rgba(0, 4, 255, 0.285);/* rgb(155, 155, 155); */
 }
 
-.container[role=main] {
-  width: 900px;
-  margin: auto;
-  background-color: rgba(0.3, 0.3, 0.3, 0.1);
-}
+/*
+ * Reset
+ */
+
+ html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box 
+ }
 
 /**
  * Typography
@@ -43,6 +47,7 @@
 
 h1 {
   font-size: 40px;
+  margin-top: 0;
   line-height: var(--line-height) * 2;
   margin-bottom: var(--line-height);
 }
@@ -71,18 +76,32 @@ h3 {
  */
 
 form input {
-  display: inline-block;
-  width: 100%;
+  display: inline;
   font-size: calc(var(--font-size) * 1);
 }
 
 form label {
-  display: inline-block;
+  display: inline;
   width: 100%;
   font-size: var(--font-size);
   font-weight: calc( (var(--font-weight) / 4) * 7) /* 700 bold */
 }
 
+form.block input {
+  width: 100%;
+}
+
+form.block label{
+  display: inline-block
+}
+
+
+
+pre, code {
+  background-color: #d2f5a9;
+  padding: 0;
+  margin: 0;
+}
  
 /* ******************************************************************** */
 /*                             DEVELOPMENT                              */
@@ -93,15 +112,16 @@ form label {
   min-height: 100px;
   position: absolute;
   left: 24px;
-  top: 48px;
+  top: 96px;
   border-radius: 3px;
   z-index: 9;
-  background-color: #e8a9f5;
+  background-color: #d2f5a9;
   border: 1px solid #000000;
   box-shadow: 5px 5px #80668198;
   padding: 1em;
   color: rgb(46, 46, 46);
   cursor: grab;
+  text-align: left;
 }
 
 #devbox input {
