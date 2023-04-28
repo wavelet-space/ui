@@ -6,7 +6,8 @@
 :root {
   --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --line-height: 1.5em;
-  --font-weight: 400;  /* 400 normal; 700 bold */
+  --font-weight: 400;
+  /* 400 normal; 700 bold */
   --font-size: 16px;
   --border-radius: 0.25rem;
   --border-width: 1px;
@@ -28,20 +29,21 @@
   --modal-overlay-backdrop-filter: blur(0.25rem);
 
   /* Development */
-  --devcolor: rgba(0, 4, 255, 0.285);/* rgb(155, 155, 155); */
+  --devcolor: rgba(0, 4, 255, 0.285);
+  /* rgb(155, 155, 155); */
 }
 
 /*
  * Reset
  */
 
- html, body {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
   height: fit-content;
- }
+}
 
 /**
  * Typography
@@ -61,7 +63,7 @@ h2 {
 }
 
 h3 {
-  font-size:  20px;
+  font-size: 20px;
 }
 
 /**
@@ -73,12 +75,28 @@ h3 {
  * Theme
  */
 
- /**
+/**
   * Tables
   */
 
+table {
+  display: table;
+  width: 100%;
+}
+
+tr {
+  border-bottom-width: 3px;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  width: 100%;
+}
+
 th {
   font-weight: calc(var(--font-weight) * 2);
+  width: 100%;
+  border-bottom-width: 3px;
+  border-bottom-color: black;
+  border-bottom-style: solid;
 }
 
 /**
@@ -96,14 +114,15 @@ form label {
   display: inline;
   width: 100%;
   font-size: var(--font-size);
-  font-weight: calc( (var(--font-weight) / 4) * 7) /* 700 bold */
+  font-weight: calc((var(--font-weight) / 4) * 7)
+    /* 700 bold */
 }
 
 form.block input {
   width: 100%;
 }
 
-form.block label{
+form.block label {
   display: inline-block
 }
 
@@ -112,7 +131,7 @@ pre {
   padding: 0.5em;
   margin: 0;
 }
- 
+
 /* ******************************************************************** */
 /*                             DEVELOPMENT                              */
 /* ******************************************************************** */
@@ -138,5 +157,5 @@ pre {
 }
 
 #devbox input {
-  cursor: pointer; 
+  cursor: pointer;
 }
