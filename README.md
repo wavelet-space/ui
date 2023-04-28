@@ -9,7 +9,6 @@
 Pro webové projekty potřebujeme často výchozý vzhled dokumentů. 
 Ideální je nasazení pro administrační nebo demonstrační stránky (dashboard).
 
-
 Cílem je vytvořit základní sadu stylů v podobě malého CSS frameworku, který bude možné použít jako rozumný základ a který lze snadno přizpůsobit konkrétnímu projektu.
 
 CSS framework by měl mít tyto vlastnosti:
@@ -17,6 +16,7 @@ CSS framework by měl mít tyto vlastnosti:
 - Dostupnost: stážení přímo z GitHub pomocí CDN např. <https://www.jsdelivr.com/>.
 - Modulárnost tzn., že lze použít jen části frameworku.
 - Minifikace pro rychlé načítání při stahování.
+- Minmální velikost pod 2kB, použitelný i na emmbeded zařízeních.
 
 Co je třeba implementovat:
 
@@ -53,3 +53,9 @@ Co je třeba implementovat:
   - `baseline-grid.css`
 - JS
   - `devel.js`
+
+
+## Inspirace
+
+- https://news.ycombinator.com/item?id=35708613
+- https://dohliam.github.io/dropin-minimal-css/

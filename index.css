@@ -38,7 +38,9 @@
  html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box 
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
  }
 
 /**
@@ -71,6 +73,14 @@ h3 {
  * Theme
  */
 
+ /**
+  * Tables
+  */
+
+th {
+  font-weight: calc(var(--font-weight) * 2);
+}
+
 /**
  * Forms
  */
@@ -78,6 +88,8 @@ h3 {
 form input {
   display: inline;
   font-size: calc(var(--font-size) * 1);
+  width: 1.2em;
+  height: 1.2em
 }
 
 form label {
@@ -95,11 +107,9 @@ form.block label{
   display: inline-block
 }
 
-
-
-pre, code {
-  background-color: #d2f5a9;
-  padding: 0;
+pre {
+  background-color: #f1f1f1;
+  padding: 0.5em;
   margin: 0;
 }
  
@@ -114,7 +124,7 @@ pre, code {
   left: 24px;
   top: 96px;
   border-radius: 3px;
-  z-index: 9;
+  z-index: 1000;
   background-color: #d2f5a9;
   border: 1px solid #000000;
   box-shadow: 5px 5px #80668198;
@@ -122,8 +132,11 @@ pre, code {
   color: rgb(46, 46, 46);
   cursor: grab;
   text-align: left;
+  /* resize: both; */
+  overflow: auto;
+
 }
 
 #devbox input {
-  cursor: pointer;
+  cursor: pointer; 
 }
