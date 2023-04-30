@@ -6,9 +6,6 @@
 let root = document.getRootNode()
 let body = document.body
 
-
-// 
-
 let print = console.log
 
 //--------------------------------------------------------------------------------------------//
@@ -112,17 +109,17 @@ window.addEventListener("load", (event) => {
 
   overlay.style.visibility = "hidden"  
   // Make the `div` element draggable.
-  let position = 0;
+  var position = 0;
+  Array.from(document.getElementsByClassName("draggable")).forEach(element => {
 
-  Array.from(document.getElementsByClassName("dragable")).forEach(element => {
     dragElement(element)
-    position =+ 50 
-    print(position)
+
     element.style.position = 'absolute';
-    element.offsetTop = 100
-    element.offsetTop = 100
+    element.style.top = 100 +  position + "px"
+    element.style.left = 100 + position + "px"
     element.style.backgroundColor = "#" + randomColorHex() 
-    console.log(randomColorHex() )
+
+    position += 20
   });
 
   //Show/hide overlay on Escape key down.
