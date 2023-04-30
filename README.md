@@ -53,9 +53,3 @@ Co je třeba implementovat:
   - `baseline-grid.css`
 - JS
   - `devel.js`
-
-
-## Inspirace
-
-- https://news.ycombinator.com/item?id=35708613
-- https://dohliam.github.io/dropin-minimal-css/

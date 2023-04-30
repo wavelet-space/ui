@@ -6,91 +6,120 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curl CSS Framework</title>
         <link rel="stylesheet" href="index.css"/>
+        <!-- <link rel="stylesheet" href="dev.css"/> -->
         <script type="text/javascript" src="index.js" defer></script>
 
         <style type="text/css">
         html, body {
            scroll-behavior: smooth;
         }
- 
+
         body {
             background-color: rgb(235, 235, 235);
+            
+            @media screen and (max-width: 63.99em) {
+                /* background: blue; */
+            }
+            
+            @media screen and (min-width: 64em) {
+                /* background: black; */
+            }
         }
 
         header {
             border-bottom: 1px solid rgb(175, 175, 175);
             background-color: rgb(231, 231, 231);
+            height: 2.4rem;
         }
 
         nav[role=main]  {
-            display: inline-block;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr; /* only column intially */
+            grid-auto-flow:dense;
+            justify-items: stretch;
+            align-items: stretch;
+            column-gap: 0;
             margin: 0;
             padding: 0;  
-            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
             font-weight: calc(var(--font-weight) * 1.5);
         } 
-        
-        nav[role=main] ul { 
-            display: inline-block;
-        }
-        nav[role=main] ul li {
-            display: inline-block;
-            list-style-type: none;
-            margin: 0 1em;
-            background-color: rgb(235, 235, 235);
-            padding: 0.5em;
-
+        nav > #logo {
+            grid-column:-3;
+            /* background-color: red; */
+            vertical-align: middle;
+            padding: 0 2.0rem;
         }
         
-        nav[role=main] ul li a  {
+        nav[role=main] > #link { 
+            display: inline-block;
+            height: 100%;
+            /* background: rgb(122, 180, 255); */
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            grid-column: 1; 
+            align-items: flex-start;
+        }
+        
+        nav[role=main] > #link a, nav[role=main] > #logo a  {
+            padding: 0 2rem;
+            display: inline-block;
             text-decoration: none;
             color: black;
-            display: inline-block;
-            width: 100%
+            /* width: 100%; */
+            vertical-align: middle;
+            padding: 0.62rem 1rem;
+            /* height: 1rem; */
         }
 
-        nav[role=main] ul li a:hover {
+        nav[role=main] > #link a:hover, nav[role=main] > #logo a:hover {
             color: rgb(143, 143, 143)
+            ;background-color: #ddd;
+
         }
 
         /* This is only for development purpose. */
         .container[role=main] {
             width: 960px;
             margin: auto;
-            border-left: 1px solid rgb(133, 133, 133);
-            border-right: 1px solid rgb(133, 133, 133);
+            border-left: 1px solid rgb(175, 175, 175);
+            border-right: 1px solid rgb(175, 175, 175);
             background-color: #fff;
-            padding: 1.5em;
+            padding: 1.2rem;
         }
 
-        #overlay {
-            pointer-events:none; 
-            width:100%;
-            height:100vh;
-            position: absolute;
-            z-index: 1000;
-            visibility: hidden;
-            background-color: rgba(0, 0, 255, 0.308);
-        }
     </style>
     </head>
     <body>
+        
+        <div class="dragable" style="background-color: #ffa; width:100px;height: 100px"></div>
+        
+        <div class="dragable" style="background-color: #ffa; width:100px;height: 100px"></div>
+        
+        <div class="dragable" style="background-color: #ffa; width:100px;height: 100px"></div>
         <div id="overlay"></div>
         <header>
             <nav role="main">
-                Navigation
-                <ul>
-                    <li><a href="#forms">Forms</a></li>
-                    <li><a href="#themes">Themes</a></li>
-                    <li><a href="#tables">Tables</a></li>
-                    <li><a href="#typography">Typography</a></li>
-                </ul>
+                <div id="logo">
+                    <a href="./index.js">
+                        Home
+                    </a>
+                </div>
+                <div id="link">
+                    <a href="#forms">Forms</a>
+                    <a href="#tables">Tables</a>
+                    <a href="#themes">Themes</a>
+                    <a href="#typography">Typography</a>
+                </div>
             </nav>
         </header>
         <div class="container" role="main">
             <main>
-                <h1>Wavelet CSS Framework</h1>
-                <p>Styling of Wavelet CSS Framework</p>
+                <h1>Wavelet UI Framework</h1>
+
+                <p>Press <kbd>Escape</kbd> to show/hide the baseline typographic grid.</p>
 
                 <section>
                     <h2>Usage</h2>
