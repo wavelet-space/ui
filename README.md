@@ -1,6 +1,6 @@
 # wavelet-ui
 
-*Minimalistic web UI framework withwell crafted CSS, semantic HTML and custom JavaScript webcomponents and Python support*
+**Web UI framework with well crafted CSS, semantic HTML and custom JavaScript webcomponents and Python support**
 
  ![GitHub stars](https://img.shields.io/github/stars/wavelet-space/ui?style=social)
 
