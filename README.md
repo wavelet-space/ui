@@ -1,6 +1,6 @@
-# CSS
+# wavelet-ui
 
-*Minimalistic Cascading Style Sheets framework for semantic HTML.*
+*Minimalistic web UI framework withwell crafted CSS, semantic HTML and custom JS webcomponents*
 
  ![GitHub stars](https://img.shields.io/github/stars/wavelet-space/css?style=social)
 
