@@ -1,4 +1,4 @@
-# wavelet-ui
+# webui
 
 **Web UI framework with well crafted CSS, semantic HTML and custom JavaScript webcomponents and Python support**
 
